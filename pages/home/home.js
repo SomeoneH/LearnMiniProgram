@@ -1,66 +1,57 @@
 // pages/home/home.js
+// 用过getApp()方法，可以获取APP()创建的实例
+const app =getApp()
+// console.log(app.globalData)
+const name = app.globalData.name
+const skill = app.globalData.skill
+console.log(name, skill)
+
+// 调用Page方法，注册一个页面
 Page({
-
-  /**
-   * 页面的初始数据
-   */
+  // 2初始化数据
   data: {
+    list: []
+  },
+  // 3监听wxml中的一些事件
+  handleGetUserInfo(event) {
+    console.log(event)
+  },
+  // 1监听生命周期
+  onLoad() {
+    console.log('onLoad---页面加载完成')
+    // 可以在这里发送网络请求,获取数据
+    wx.request({
+      url: 'http://152.136.185.210:8000/api/n3/recommend',
+      success: (res) => {
+        // console.log(res)
+        const data = res.data.data.list
+        this.setData({
+          list: data
+        })
+      }
+    })
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onShow() {
+    console.log('onShow---页面显示出来')
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onReady() {
+    console.log('onReady---页面【初次】渲染完成')
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onHide() {
+    console.log('onHide---页面隐藏')
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  onUnload() {
+    console.log('onUnload---页面销毁')
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  // 4.监听其他事件（滚动，下拉刷新，滚动到底部）
+  onPageScroll(obj) {
+    console.log(obj)
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  onReachBottom() {
+    console.log('onReachBottom---滚动到底部')
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onPullDownRefresh() {
+    console.log('onPullDownRefresh---下拉刷新')
   }
 })

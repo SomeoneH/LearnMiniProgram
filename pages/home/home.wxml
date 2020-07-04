@@ -1,3 +1,16 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello 小程序</text>
 <button size="mini">按钮</button>
+
+<!-- 获取用户信息的第二种方法：open-type -->
+<button
+size="mini"
+open-type="getUserInfo"
+bindgetuserinfo="handleGetUserInfo"
+>获取用户信息</button>
+
+<!-- 获取用户信息的第三种方法：open-data(仅用于展示) -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+<view wx:for="{{list}}">{{item.title}}</view>

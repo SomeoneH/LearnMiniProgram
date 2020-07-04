@@ -11,7 +11,7 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "五月病",
     "backgroundColor": "#EEEEEE",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "backgroundTextStyle": "light"
   },
   "tabBar": {
