@@ -1,0 +1,27 @@
+<!--pages/button/button.wxml-->
+<!-- <text>pages/button/button.wxml</text> -->
+
+<!-- 1.基本使用 -->
+<button>按钮默认是块元素</button>
+
+<!-- 2.size属性 -->
+<button size="mini">设置size="mini"后，按钮将会变成行内元素</button>
+
+<!-- 3.type属性控制按钮样式 -->
+<button type="primary">primary</button>
+<button type="default">default</button>
+<button type="warn">warn</button>
+
+<!-- 4.disabled -->
+<button disabled>disabled让按钮不可选中</button>
+
+<!-- 5.plain属性让按钮镂空 -->
+<button plain>plain属性让按钮镂空</button>
+
+<!-- 6.loading属性让按钮显示加载样式 -->
+<button loading>loading属性让按钮显示加载样式</button>
+
+<!-- 7.hover-class属性控制按下样式 -->
+<button hover-class="active">hover-class属性控制按下样式当</button>
+<button hover-class="none">hover-class="none" 时，没有点击态效果</button>
+

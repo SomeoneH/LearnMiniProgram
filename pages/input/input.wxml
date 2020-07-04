@@ -1,0 +1,23 @@
+<!--pages/input/input.wxml-->
+<!-- <text>pages/input/input.wxml</text> -->
+
+<!-- 基本使用(默认没有边框，背景色为白色) -->
+<input></input>
+
+<!-- type控制输入框的类型 -->
+<input type="number"></input>
+
+<!-- placeholder占位文字 -->
+<input placeholder="placeholder占位文字"></input>
+
+<!-- value输入框的值 -->
+<input value="value输入框的值"></input>
+
+<!-- password控制输入框暗文显示 -->
+<input password placeholder="password控制输入框暗文显示"></input>
+
+<!-- bindfocus -->
+<input
+bindfocus="bindfocus"
+bindinput="bindinput"
+bindblur="bindblur"></input>

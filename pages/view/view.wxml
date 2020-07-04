@@ -1,0 +1,16 @@
+<!--pages/view/view.wxml-->
+<!-- <text>pages/view/view.wxml</text> -->
+
+<!-- 1.基本使用 -->
+<view>相当于html里面的div，块级元素\n</view>
+
+<!-- 2.hover-class控制点击时的样式 -->
+<view class="box1" hover-class="box1-hover">hover-class控制点击时的样式</view>
+
+<!-- 3.hover-start-time按住后多久出现点击态, hover-stay-time手指松开后点击态保留时间 -->
+<view class="box1" hover-class="box1-hover" hover-start-time="0" hover-stay-time="0">hover-start-time按住后多久出现点击态, hover-stay-time手指松开后点击态保留时间</view>
+
+<!-- 4.hover-stop-propagation阻止冒泡 -->
+<view class="box2" hover-class="box2-hover">
+  <view class="box1" hover-class="box1-hover" hover-stop-propagation="true">hover-stop-propagation阻止冒泡</view>
+</view>

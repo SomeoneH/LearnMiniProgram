@@ -1,0 +1,16 @@
+<!--pages/text/text.wxml-->
+<!-- <text>pages/text/text.wxml</text> -->
+
+<!-- text组件的基本使用 -->
+<text>行内元素，跟span类似\n</text>
+<text>可以通过转义n换行\n</text>
+
+<!-- selectable属性 -->
+<text selectable="{{true}}">selectable控制文字是否能选中，默认是false\n</text>
+<text selectable="">可以简写，只加selectable属性名\n</text>
+
+<!-- space属性 -->
+<text>space属性控制空格的显示 默认是nbsp\n</text>
+<text space="nbsp">space属性控制空格的显示 默认是nbsp\n</text>
+<text space="ensp">space属性控制空格的显示 ensp表示半角显示空格\n</text>
+<text space="emsp">space属性控制空格的显示 emsp表示半角显示空格nbsp\n</text>

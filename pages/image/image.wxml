@@ -1,0 +1,25 @@
+<!--pages/image/image.wxml-->
+<!-- <text>pages/image/image.wxml</text> -->
+
+<!-- image的src地址支持相对路径和绝对路径 -->
+<image src="/asset/img1.jpg"></image>
+<image src="../../asset/img1.jpg"></image>
+
+<!-- 网络图片 -->
+<image src="http://pic2.zhimg.com/50/v2-cdafeec56538d8e07ea13d55cb38b2a3_hd.jpg"></image>
+
+<!-- 调用系统API-chooseImage,让用户选择相册中的照片并展示出来 -->
+<button bindtap="chooseAlbum">选择图片</button>
+<image src="{{imgPath}}"></image>
+
+<!-- 长按显示菜单 -->
+<image
+show-menu-by-longpress
+src="http://pic2.zhimg.com/50/v2-cdafeec56538d8e07ea13d55cb38b2a3_hd.jpg"></image>
+
+<!-- 监听图片加载以及lazy-load -->
+<image
+wx:for="{{10}}"
+src="http://pic2.zhimg.com/50/v2-cdafeec56538d8e07ea13d55cb38b2a3_hd.jpg"
+bindload="imageLoad"
+lazy-load></image>
